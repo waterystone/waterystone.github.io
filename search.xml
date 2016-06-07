@@ -4,6 +4,14 @@
   
     
     <entry>
+      <title><![CDATA[test]]></title>
+      <url>http://waterystone.github.io/2016/06/07/test/</url>
+      <content type="html"><![CDATA[<h1 id="中国"><a href="#中国" class="headerlink" title="中国"></a>中国</h1><h2 id="china"><a href="#china" class="headerlink" title="china"></a>china</h2><pre><code>private int a=5;
+</code></pre><p><strong>sssss</strong><br><em>sssss</em><br>end</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello,World]]></title>
       <url>http://waterystone.github.io/2016/06/07/Hello-World/</url>
       <content type="html"><![CDATA[<pre><code>This is my first page in github page.

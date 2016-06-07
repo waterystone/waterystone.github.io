@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://waterystone.github.io/"/>
-  <updated>2016-06-07T08:11:09.267Z</updated>
+  <updated>2016-06-07T10:31:56.641Z</updated>
   <id>http://waterystone.github.io/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://waterystone.github.io/2016/06/07/test/"/>
+    <id>http://waterystone.github.io/2016/06/07/test/</id>
+    <published>2016-06-07T10:09:37.000Z</published>
+    <updated>2016-06-07T10:31:56.641Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;中国&quot;&gt;&lt;a href=&quot;#中国&quot; class=&quot;headerlink&quot; title=&quot;中国&quot;&gt;&lt;/a&gt;中国&lt;/h1&gt;&lt;h2 id=&quot;china&quot;&gt;&lt;a href=&quot;#china&quot; class=&quot;headerlink&quot; title=&quot;china&quot;&gt;&lt;/a&gt;china&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;private int a=5;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;sssss&lt;/strong&gt;&lt;br&gt;&lt;em&gt;sssss&lt;/em&gt;&lt;br&gt;end&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;中国&quot;&gt;&lt;a href=&quot;#中国&quot; class=&quot;headerlink&quot; title=&quot;中国&quot;&gt;&lt;/a&gt;中国&lt;/h1&gt;&lt;h2 id=&quot;china&quot;&gt;&lt;a href=&quot;#china&quot; class=&quot;headerlink&quot; title=&quot;china&quot;&gt;&lt;/a&gt;chin
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello,World</title>
