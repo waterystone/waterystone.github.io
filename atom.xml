@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://waterystone.github.io/"/>
-  <updated>2016-06-07T10:31:56.641Z</updated>
+  <updated>2016-06-08T07:05:42.580Z</updated>
   <id>http://waterystone.github.io/</id>
   
   <author>
@@ -16,14 +16,131 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>windows下使用hexo搭建GitHub Pages</title>
+    <link href="http://waterystone.github.io/2016/06/08/windows%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAGitHub%20Pages/"/>
+    <id>http://waterystone.github.io/2016/06/08/windows使用hexo搭建GitHub Pages/</id>
+    <published>2016-06-08T02:57:09.000Z</published>
+    <updated>2016-06-08T07:05:42.580Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;软件预装&quot;&gt;&lt;a href=&quot;#软件预装&quot; class=&quot;headerlink&quot; title=&quot;软件预装&quot;&gt;&lt;/a&gt;软件预装&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://nodejs.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.js&lt;/a&gt;&lt;br&gt; 国内由于网络环境，某些npm的软件无法下载，推荐用淘宝搭建的&lt;a href=&quot;https://npm.taobao.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt;。&lt;br&gt; &lt;code&gt;$ npm install -g cnpm --registry=https://registry.npm.taobao.org #以后就可以用cnpm代替npm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://git-scm.com/download&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;hexo&quot;&gt;&lt;a href=&quot;#hexo&quot; class=&quot;headerlink&quot; title=&quot;hexo&quot;&gt;&lt;/a&gt;hexo&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install -g hexo-cli&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;建站&quot;&gt;&lt;a href=&quot;#建站&quot; class=&quot;headerlink&quot; title=&quot;建站&quot;&gt;&lt;/a&gt;建站&lt;/h2&gt;&lt;p&gt;在一个工作目录下，执行如下命令：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo init &amp;lt;folder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ cd &amp;lt;folder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;  此时，npm会将建站必须的资源拉入&lt;strong&gt;folder&lt;/strong&gt;下,站的框架已经基本搭成。folder目录如下:&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── _config.yml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── package.json&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── scaffolds&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;├── source&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   ├── _drafts&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;|   └── _posts&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;└── themes&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;其中&lt;strong&gt;_config.yml&lt;/strong&gt;是hexo的&lt;a href=&quot;https://hexo.io/zh-cn/docs/configuration.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;配置文件&lt;/a&gt;，以后的许多配置都是通过它来完成。&lt;/p&gt;
+&lt;h2 id=&quot;运行项目&quot;&gt;&lt;a href=&quot;#运行项目&quot; class=&quot;headerlink&quot; title=&quot;运行项目&quot;&gt;&lt;/a&gt;运行项目&lt;/h2&gt;&lt;h3 id=&quot;编译&quot;&gt;&lt;a href=&quot;#编译&quot; class=&quot;headerlink&quot; title=&quot;编译&quot;&gt;&lt;/a&gt;编译&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;运行&quot;&gt;&lt;a href=&quot;#运行&quot; class=&quot;headerlink&quot; title=&quot;运行&quot;&gt;&lt;/a&gt;运行&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;访问&quot;&gt;&lt;a href=&quot;#访问&quot; class=&quot;headerlink&quot; title=&quot;访问&quot;&gt;&lt;/a&gt;访问&lt;/h3&gt;&lt;p&gt;此时在浏览器中访问&lt;a href=&quot;http://127.0.0.1:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://127.0.0.1:4000/&lt;/a&gt;,即可看到本地搭建好的hexo初始博客站点。&lt;/p&gt;
+&lt;h2 id=&quot;hexo命令-参见-指令&quot;&gt;&lt;a href=&quot;#hexo命令-参见-指令&quot; class=&quot;headerlink&quot; title=&quot;hexo命令(参见:指令)&quot;&gt;&lt;/a&gt;hexo命令(参见:&lt;a href=&quot;https://hexo.io/zh-cn/docs/commands.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;指令&lt;/a&gt;)&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo g == hexo generate&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo d == hexo deploy&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo s == hexo server&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo n == hexo new&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;还能组合使用，如：&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo s -g&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;hexo d -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h1 id=&quot;hexo高级功能&quot;&gt;&lt;a href=&quot;#hexo高级功能&quot; class=&quot;headerlink&quot; title=&quot;hexo高级功能&quot;&gt;&lt;/a&gt;hexo高级功能&lt;/h1&gt;&lt;h2 id=&quot;更换主题&quot;&gt;&lt;a href=&quot;#更换主题&quot; class=&quot;headerlink&quot; title=&quot;更换主题&quot;&gt;&lt;/a&gt;更换主题&lt;/h2&gt;&lt;p&gt;folder目录下有个themes目录，此目录保存博客的主题(默认是landscape，在hexo配置文件的theme配置项)。hexo有自己的配置文件，即主目录下的_config.yml；主题也有自己的配置文件，即主题目录下的_config.yml。为了区别，我们将前者叫做站点配置文件，后者叫做主题配置文件。&lt;br&gt;如果想更换其他主题，比如本博的maupassant：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载主题到theme目录&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ cd &amp;lt;folder&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ git clone https://github.com/tufu9441/maupassant-hexo.git themes/maupassant&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装hexo主题插件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-renderer-jade --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-renderer-sass --save&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改站点配置文件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;language: zh-CN&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;theme: maupassant&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重新编译运行&lt;br&gt;&lt;code&gt;hexo s -g&lt;/code&gt;后再次访问&lt;a href=&quot;http://127.0.0.1:4000/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://127.0.0.1:4000/&lt;/a&gt;，就可以看到新的主题已经生效了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;使标签、分类等生效&quot;&gt;&lt;a href=&quot;#使标签、分类等生效&quot; class=&quot;headerlink&quot; title=&quot;使标签、分类等生效&quot;&gt;&lt;/a&gt;使标签、分类等生效&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new page tags&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new page archives&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new page categories&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new page about&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这样，下次&lt;code&gt;hexo g&lt;/code&gt;的时候，会将标签、分类等信息编译进相应的目录下（相应的插件在安装hexo时已经默认安装了），并生效。&lt;/p&gt;
+&lt;h2 id=&quot;使搜索框的本地搜索生效&quot;&gt;&lt;a href=&quot;#使搜索框的本地搜索生效&quot; class=&quot;headerlink&quot; title=&quot;使搜索框的本地搜索生效&quot;&gt;&lt;/a&gt;使搜索框的本地搜索生效&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;安装hexo插件&lt;code&gt;npm install hexo-generator-search --save&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改主题配置文件的self_search&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;self_search: true ## Use a jQuery-based local search engine, true/false.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重新编译启动hexo即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;添加评论功能&quot;&gt;&lt;a href=&quot;#添加评论功能&quot; class=&quot;headerlink&quot; title=&quot;添加评论功能&quot;&gt;&lt;/a&gt;添加评论功能&lt;/h2&gt;&lt;p&gt;maupassant使用的是第三方评论平台&lt;a href=&quot;http://duoshuo.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;多说&lt;/a&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;登陆多说并创建站点&lt;br&gt; &lt;img src=&quot;http://7xv60m.com1.z0.glb.clouddn.com/%E5%A4%9A%E8%AF%B4%E5%88%9B%E5%BB%BA%E7%AB%99%E7%82%B9.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编辑主题配置文件，将上图红色方框里的多说短域名设置为duoshuo的值。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;duoshuo: xxxx ## Your duoshuo_shortname, e.g. username&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;OK,重新编译启动hexo后，即可看到评论功能。评论后就能在创建的多说站点里，管理所有的评论啦。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;404页面&quot;&gt;&lt;a href=&quot;#404页面&quot; class=&quot;headerlink&quot; title=&quot;404页面&quot;&gt;&lt;/a&gt;404页面&lt;/h2&gt;&lt;p&gt;在主目录的source目录下创建&lt;strong&gt;404.html&lt;/strong&gt;或&lt;strong&gt;404.md&lt;/strong&gt;(注意文件需要UTF-8编码)，内容如下：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;layout: false&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;title: &amp;quot;页面不存在&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;lt;meta http-equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html;charset=utf-8&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://www.qq.com/404/search_children.js&amp;quot; charset=&amp;quot;utf-8&amp;quot; homePageUrl=&amp;quot;http://xxx.github.io&amp;quot; homePageName=&amp;quot;回到首页&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;lt;/body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;RSS订阅&quot;&gt;&lt;a href=&quot;#RSS订阅&quot; class=&quot;headerlink&quot; title=&quot;RSS订阅&quot;&gt;&lt;/a&gt;RSS订阅&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;安装hexo插件&lt;code&gt;npm install hexo-generator-feed --save&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改站点配置文件,增加如下设置&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;Plugins:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- hexo-generator-feed&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#Feed Atom&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;feed:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  type: atom&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  path: atom.xml&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  limit: 20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重新编译启动hexo即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;部署到GitHub-Page&quot;&gt;&lt;a href=&quot;#部署到GitHub-Page&quot; class=&quot;headerlink&quot; title=&quot;部署到GitHub Page&quot;&gt;&lt;/a&gt;部署到GitHub Page&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在github创建一个username.github.io的库（username为自己github的用户名，&lt;strong&gt;必须按照这种格式&lt;/strong&gt;）;&lt;/li&gt;
+&lt;li&gt;这时通过username.github.io就可以看到一个空的博客站点了；&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改站点配置文件&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  type: git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  repo: https://github.com/&amp;lt;username&amp;gt;/&amp;lt;username&amp;gt;.github.io.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  branch: master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;本地博客内容同步到github&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo d -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;加入百度统计&quot;&gt;&lt;a href=&quot;#加入百度统计&quot; class=&quot;headerlink&quot; title=&quot;加入百度统计&quot;&gt;&lt;/a&gt;加入百度统计&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;注册&lt;a href=&quot;http://tongji.baidu.com/web/welcome/login&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;百度统计&lt;/a&gt;&lt;br&gt; 在域名填入自己的站点&lt;/li&gt;
+&lt;li&gt;获取百度统计号&lt;br&gt;&lt;img src=&quot;http://7xv60m.com1.z0.glb.clouddn.com/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E4%BB%A3%E7%A0%81%E8%8E%B7%E5%8F%96.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改主题配置文件的baidu_analytics配置项&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;baidu_analytics: xxxxxxxxb516a46cxxxxxxxx ## Your Baidu Analytics tracking id, e.g. 8006843039519956000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重新编译启动hexo即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;使用七牛图床&quot;&gt;&lt;a href=&quot;#使用七牛图床&quot; class=&quot;headerlink&quot; title=&quot;使用七牛图床&quot;&gt;&lt;/a&gt;使用七牛图床&lt;/h2&gt;&lt;p&gt;GitHub Pages只有300MB的空间，所以图片最好还是放在第三方，比如七牛。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;注册七牛–&amp;gt;添加资源–&amp;gt;对象存储，添加一个存储库。&lt;/li&gt;
+&lt;li&gt;上传图片(内容管理–&amp;gt;上传文件)，获取外链(操作–&amp;gt;复制外链)。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;创建文章&quot;&gt;&lt;a href=&quot;#创建文章&quot; class=&quot;headerlink&quot; title=&quot;创建文章&quot;&gt;&lt;/a&gt;创建文章&lt;/h1&gt;&lt;p&gt;OK，经过前边的设置，一个功能齐全的博客站点已经形成了。下面要做的就是编写博客了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;创建文章&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo n &amp;quot;title&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在source/_post下找到相应的md文件，使用编辑器(推荐&lt;a href=&quot;https://www.zybuluo.com/mdeditor#402917&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cmd Markdown&lt;/a&gt;)进行编写。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编写过程中本地预览&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo s -g --debug&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt; 不用每次都重新编译重启hexo，它是热生效的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;博客编写完成后，同步到GitHub.&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;hexo d -g&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      本文讲述如何一步一步使用hexo搭建GitHub Pages.
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://waterystone.github.io/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://waterystone.github.io/tags/hexo/"/>
+    
+      <category term="GitHub" scheme="http://waterystone.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
     <title>test</title>
     <link href="http://waterystone.github.io/2016/06/07/test/"/>
     <id>http://waterystone.github.io/2016/06/07/test/</id>
     <published>2016-06-07T10:09:37.000Z</published>
-    <updated>2016-06-07T10:31:56.641Z</updated>
+    <updated>2016-06-08T02:16:04.122Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;中国&quot;&gt;&lt;a href=&quot;#中国&quot; class=&quot;headerlink&quot; title=&quot;中国&quot;&gt;&lt;/a&gt;中国&lt;/h1&gt;&lt;h2 id=&quot;china&quot;&gt;&lt;a href=&quot;#china&quot; class=&quot;headerlink&quot; title=&quot;china&quot;&gt;&lt;/a&gt;china&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;private int a=5;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;sssss&lt;/strong&gt;&lt;br&gt;&lt;em&gt;sssss&lt;/em&gt;&lt;br&gt;end&lt;/p&gt;
+    <content type="html">&lt;h1 id=&quot;中国&quot;&gt;&lt;a href=&quot;#中国&quot; class=&quot;headerlink&quot; title=&quot;中国&quot;&gt;&lt;/a&gt;中国&lt;/h1&gt;&lt;h2 id=&quot;china&quot;&gt;&lt;a href=&quot;#china&quot; class=&quot;headerlink&quot; title=&quot;china&quot;&gt;&lt;/a&gt;china&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; a=&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;sssss&lt;/strong&gt;&lt;br&gt;&lt;em&gt;sssss&lt;/em&gt;&lt;br&gt;end&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://github.global.ssl.fastly.net/images/modules/logos_page/GitHub-Mark.png&quot; alt=&quot;test&quot;&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
