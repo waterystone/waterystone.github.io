@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://waterystone.github.io/"/>
-  <updated>2016-06-08T07:05:42.580Z</updated>
+  <updated>2016-06-14T08:00:25.641Z</updated>
   <id>http://waterystone.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://waterystone.github.io/2016/06/08/windows%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAGitHub%20Pages/"/>
     <id>http://waterystone.github.io/2016/06/08/windows使用hexo搭建GitHub Pages/</id>
     <published>2016-06-08T02:57:09.000Z</published>
-    <updated>2016-06-08T07:05:42.580Z</updated>
+    <updated>2016-06-14T08:00:25.641Z</updated>
     
     <content type="html">&lt;h1 id=&quot;软件预装&quot;&gt;&lt;a href=&quot;#软件预装&quot; class=&quot;headerlink&quot; title=&quot;软件预装&quot;&gt;&lt;/a&gt;软件预装&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://nodejs.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Node.js&lt;/a&gt;&lt;br&gt; 国内由于网络环境，某些npm的软件无法下载，推荐用淘宝搭建的&lt;a href=&quot;https://npm.taobao.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;npm&lt;/a&gt;。&lt;br&gt; &lt;code&gt;$ npm install -g cnpm --registry=https://registry.npm.taobao.org #以后就可以用cnpm代替npm&lt;/code&gt;&lt;/li&gt;
@@ -91,6 +91,14 @@
 &lt;li&gt;获取百度统计号&lt;br&gt;&lt;img src=&quot;http://7xv60m.com1.z0.glb.clouddn.com/%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E4%BB%A3%E7%A0%81%E8%8E%B7%E5%8F%96.jpg&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;修改主题配置文件的baidu_analytics配置项&lt;/p&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;baidu_analytics: xxxxxxxxb516a46cxxxxxxxx ## Your Baidu Analytics tracking id, e.g. 8006843039519956000&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;重新编译启动hexo即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;加入Google分析&quot;&gt;&lt;a href=&quot;#加入Google分析&quot; class=&quot;headerlink&quot; title=&quot;加入Google分析&quot;&gt;&lt;/a&gt;加入Google分析&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;注册&lt;a href=&quot;https://analytics.google.com/analytics/web/?hl=zh-CN&amp;amp;pli=1#report/defaultid/a79273564w118388251p123837186/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Google Analytics&lt;/a&gt;,会生成一个跟踪ID，形如UA-42425684-2.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改主题配置文件的google_analytics配置项&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;google_analytics: UA-42425684-2 ## Your Google Analytics tracking id, e.g. UA-42425684-2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;重新编译启动hexo即可。&lt;/p&gt;
 &lt;/li&gt;

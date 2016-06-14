@@ -79,6 +79,14 @@
 <li><p>重新编译启动hexo即可。</p>
 </li>
 </ol>
+<h2 id="加入Google分析"><a href="#加入Google分析" class="headerlink" title="加入Google分析"></a>加入Google分析</h2><ol>
+<li>注册<a href="https://analytics.google.com/analytics/web/?hl=zh-CN&amp;pli=1#report/defaultid/a79273564w118388251p123837186/" target="_blank" rel="external">Google Analytics</a>,会生成一个跟踪ID，形如UA-42425684-2.</li>
+<li><p>修改主题配置文件的google_analytics配置项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google_analytics: UA-42425684-2 ## Your Google Analytics tracking id, e.g. UA-42425684-2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重新编译启动hexo即可。</p>
+</li>
+</ol>
 <h2 id="使用七牛图床"><a href="#使用七牛图床" class="headerlink" title="使用七牛图床"></a>使用七牛图床</h2><p>GitHub Pages只有300MB的空间，所以图片最好还是放在第三方，比如七牛。</p>
 <ol>
 <li>注册七牛–&gt;添加资源–&gt;对象存储，添加一个存储库。</li>
